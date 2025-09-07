@@ -1,0 +1,16 @@
+{
+  "description": "Define parameter search space for strategy optimization across multiple symbols.",
+  "symbols": [
+    "BNBUSDT"
+  ],
+  "data_file_template": "data/{symbol}_5m_assembley.csv",
+  "base_config_template": "config/{symbol}_config.json",
+  "search_space": {
+    "signal_generation": {
+      "buy_risk_reward_ratio": [2.2, 2.5, 2.8],
+      "sell_risk_reward_ratio": [2.5, 2.8, 3.0],
+      "confidence_threshold": [0.68, 0.72, 0.75]
+    }
+  },
+  "optimization_metric": "profit_pct"
+}

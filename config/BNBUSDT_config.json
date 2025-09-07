@@ -1,0 +1,51 @@
+{
+    "symbol": "BNBUSDT",
+    "interval": "5m",
+    "regime_filter": {
+        "enabled": true,
+        "period": 200
+    },
+    "indicators": {
+        "rsi_period": 14,
+        "stoch_k": 14,
+        "stoch_d": 3,
+        "macd_fast": 12,
+        "macd_slow": 26,
+        "macd_signal": 9,
+        "atr_period": 14,
+        "bb_period": 20,
+        "bb_std": 2.0
+    },
+    "signal_generation": {
+        "future_periods": 12,
+        "profit_threshold": 0.008,
+        "buy_risk_reward_ratio": 1.8,
+        "sell_risk_reward_ratio": 1.8,
+        "confidence_threshold": 0.6
+    },
+    "model": {
+        "optimize_hyperparameters": true,
+        "optimization_trials": 3,
+        "default_params": {
+            "rf_n_estimators": 150,
+            "rf_max_depth": 15,
+            "gb_n_estimators": 150,
+            "gb_learning_rate": 0.1,
+            "gb_max_depth": 5
+        }
+    },
+    "risk_management": {
+        "stop_loss_atr_multiplier": 1.2,
+        "take_profit_atr_multiplier": 5.0,
+        "trailing_stop_enabled": true,
+        "trailing_atr_multiplier": 1.2,
+        "activation_profit_pct": 0.008,
+        "breakeven_period": 6
+    },
+    "analysis": {
+        "future_periods_for_analysis": 288
+    },
+    "incremental_learning": {
+        "new_data_directory": "incremental_learning/{symbol}/"
+    }
+}

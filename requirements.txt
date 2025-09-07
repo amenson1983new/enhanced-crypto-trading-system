@@ -1,0 +1,24 @@
+# Core data processing
+pandas>=1.5.0,<2.0.0
+numpy>=1.21.0,<2.0.0
+scipy>=1.7.0
+
+# Technical indicators - specific version that works with NumPy 1.x
+pandas-ta>=0.3.14b0,<0.4.0
+
+# Alternative technical analysis library as backup
+ta-lib>=0.4.25
+
+# Machine learning
+scikit-learn>=1.1.0,<1.4.0
+imbalanced-learn>=0.9.0
+optuna>=3.0.0
+joblib>=1.2.0
+
+# Utilities
+tqdm>=4.64.0
+python-dateutil>=2.8.0
+pytz>=2022.1
+
+# Configuration
+pyyaml>=6.0
