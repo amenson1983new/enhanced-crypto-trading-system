@@ -1,0 +1,44 @@
+{
+    "trending": {
+        "description": "Ultra-Selective Trend: Uses a trailing stop as the primary take-profit mechanism.",
+        "config": {
+            "regime_filter": { "enabled": true, "period": 200 },
+            "signal_generation": {
+                "future_periods": 12,
+                "profit_threshold": 0.02,
+                "buy_risk_reward_ratio": 3.0,
+                "sell_risk_reward_ratio": 3.0,
+                "confidence_threshold": 0.85
+            },
+            "risk_management": {
+                "stop_loss_atr_multiplier": 1.2,
+                "take_profit_atr_multiplier": 10.0,
+                "trailing_stop_enabled": true,
+                "trailing_atr_multiplier": 2.0,
+                "activation_profit_pct": 0.01,
+                "breakeven_period": 4
+            }
+        }
+    },
+    "ranging": {
+        "description": "Mean Reversion: Aims for small, frequent profits with a trailing stop for occasional runners.",
+        "config": {
+            "regime_filter": { "enabled": true, "period": 200 },
+            "signal_generation": {
+                "future_periods": 12,
+                "profit_threshold": 0.008,
+                "buy_risk_reward_ratio": 1.8,
+                "sell_risk_reward_ratio": 1.8,
+                "confidence_threshold": 0.60
+            },
+            "risk_management": {
+                "stop_loss_atr_multiplier": 1.2,
+                "take_profit_atr_multiplier": 5.0,
+                "trailing_stop_enabled": true,
+                "trailing_atr_multiplier": 1.2,
+                "activation_profit_pct": 0.008,
+                "breakeven_period": 6
+            }
+        }
+    }
+}

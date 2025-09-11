@@ -33,7 +33,7 @@ def main(symbol, interval, run_training, optimize, incremental_train):
 
     logger.info(f"Starting process for symbol: {symbol} on {interval} interval.")
     
-data_processor = DataProcessor(config, strategies)
+    data_processor = DataProcessor(config, strategies)
     model_trainer = ModelTrainer(config)
 
     if run_training:
